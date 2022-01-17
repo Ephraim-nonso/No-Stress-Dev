@@ -28,7 +28,6 @@ nav {
   height: 90px;
   background-color: #fff;
 }
-
 .app-name {
   display: flex;
   justify-content: center;
@@ -183,7 +182,7 @@ table {
   border-collapse: collapse;
   width: 50%;
   border: solid 0.05rem black;
-  background: rgb(255, 138, 138, 0.3);
+  background: #FAEEF7;
 }
 td {
   padding: 2rem;
@@ -195,12 +194,45 @@ td {
   /* border-left: solid 0.1rem black; */
 }
 
-input[type="checkbox"] ~ .replace {
+/* input[type="checkbox"] ~ .replace {
   color: #df1212;
-}
+} */
 .contain {
   place-content: center;
+  background-color:rgb(255, 255, 255);
+  height:100%;
+  padding-top:4rem;
 }
+/*change theme*/
+.tableNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  height: 90px;
+  background: linear-gradient(
+    258.39deg,
+    #fae7e7 57.51%,
+    rgba(250, 231, 231) 126.61%
+  );
+}
+.tableNav.theme {
+  background: white;
+}
+
+table.theme1 {
+  background: rgb(12, 12, 12);
+}
+.contain.theme2{
+  place-content: center;
+  height:100%;
+  padding-top:4rem;
+  background:rgb(12, 12, 12);
+}
+
+/*end of change theme*/
 /* Media Queries for the responsiveness */
 @media (max-width: 496px) {
   .app-name {
@@ -212,3 +244,43 @@ input[type="checkbox"] ~ .replace {
     margin-bottom: 10px;
   }
 }
+.tableHeader th{
+  padding-top:20px;
+}
+/* Checkbox edit */
+.label-name-2 > input {
+  height: 34px;
+  width: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 2px solid #34495e;
+  border-radius: 5px;
+  outline: none;
+  transition-duration: 0.3s;
+  background-color: #ffffff;
+  cursor: pointer;
+  position:relative;
+}
+
+.label-name-2 > input:checked {
+  /* margin:1px; */
+   transition: 120ms transform ease-in-out;
+  border: 2px solid #366184;
+  background-color: #FA0101;
+  color: white;
+  /* z-index:1; */
+}
+.label-name-2 > input:checked::before {
+  content: "\2713";
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  color: white;
+font-weight:800px;
+  top:2.5px;
+  left:8px;
+  position:absolute;
+}
+/* checkbox edit */

@@ -3,6 +3,8 @@ const switchBtn = document.querySelector(".switch-btn");
 const inputText = document.getElementById("inputText");
 const addTopic = document.querySelector(".fa-plus");
 const routeBtn = document.querySelector(".btn");
+const switchBtnTable = document.querySelector(".table-btn");
+// const table = document.querySelector(table);
 
 let arr = [];
 let myStorage = window.localStorage;
@@ -36,8 +38,18 @@ const changeColorTheme = () => {
 
   switchBtn.addEventListener("click", changeColorTheme);
 };
-
 switchBtn.addEventListener("click", changeColorTheme);
+
+const changeColorThemeTable = () => {
+  const todoList = document.querySelector(".todoList");
+  // changes nav theme;
+  const nav = document.querySelector(".tableNav");
+  nav.classList.toggle("theme");
+  section.classList.toggle("theme");
+  switchBtnTable.addEventListener("click", changeColorTheme);
+};
+
+switchBtnTable.addEventListener("click", changeColorTheme);
 
 // Add Todo on Submit;
 function addTodoList() {
